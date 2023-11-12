@@ -1,0 +1,9 @@
+{% extends 'mysite/base.html' %}
+{%block content%}
+<form method="post">
+    {%csrf_token%}
+    {{form}}
+    <p>dont have an account? sign up <a href="{%url 'sign-up'%}">here</a></p>
+    <button type="submit" class="btn btn-success">submit</button>
+</form>
+{%endblock content%}

@@ -1,0 +1,19 @@
+{% extends 'mysite/base.html' %}
+
+{%block content%}
+<h1>this is my storage</h1>
+<div>
+  {%if user.is_authenticated %}
+  <h1>Shared Pictures</h1>
+  <ul>
+    {% for picture in shared_pictures %}
+      <li>
+        <img src="{{ picture.picture.url }}" alt="{{ picture.picture.name }}">
+      </li>
+    {% endfor %}
+  </ul>
+
+  {%endif%}
+</div>
+
+{%endblock content%}

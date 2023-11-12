@@ -1,0 +1,9 @@
+{% extends 'mysite/base.html' %}
+{%block content%}
+<form method="post">
+    {%csrf_token%}
+    {{form}}
+    <p>have an account? login in <a href="{%url 'login' %}">here</a></p>
+    <button type="submit" class="btn btn-success">submit</button>
+</form>
+{%endblock content%}
